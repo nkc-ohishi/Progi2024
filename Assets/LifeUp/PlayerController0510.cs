@@ -51,6 +51,7 @@ public class PlayerController0510 : MonoBehaviour
             life--;
         }
 
+
         // 回復ポイントに重なったら
         Vector3 v = kaifukuPoint.transform.position - transform.position;
         float length = v.magnitude;
@@ -62,6 +63,8 @@ public class PlayerController0510 : MonoBehaviour
             kaifukuPoint.transform.position = new Vector3(x, y, 0);
         }
 
+        // 回復ポイントの方に移動
+        dir = v.normalized;
 
         transform.position += dir * speed * Time.deltaTime;
 

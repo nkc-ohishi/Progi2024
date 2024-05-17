@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LifeUp/LifeUpScene.unity
-    guid: 94f84cdc9aac121459dfe8e2eca364c3
+    path: Assets/Number3/Number3.unity
+    guid: 04d8f92f1c741164d9af4bdbb8bc2b98
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

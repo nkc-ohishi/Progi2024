@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 // 科目：プログラミング技法
 // 内容：ライフを回復するサンプルプログラム（インクリメント、デクリメント、演算）
-// 担当：Ken.D.Ohishi 2024.05.10
+// 担当：Ken.D.Ohishi 2024.05.17
 //------------------------------------------------------------------------------
 using System.Collections;
 using System.Collections.Generic;
@@ -21,8 +21,7 @@ public class PlayerController0510 : MonoBehaviour
     void Start()
     {
         speed = 5f;
-        life = 100;
-        
+        life = 100;        
     }
 
     void Update()
@@ -30,7 +29,7 @@ public class PlayerController0510 : MonoBehaviour
         // 上下左右に動かす
         Vector3 dir = Vector3.zero; // (x,y,z) = (0,0,0)
 
-        if(Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             dir.x = 1;
             life++;
@@ -51,7 +50,6 @@ public class PlayerController0510 : MonoBehaviour
             life--;
         }
 
-
         // 回復ポイントに重なったら
         Vector3 v = kaifukuPoint.transform.position - transform.position;
         float length = v.magnitude;
@@ -64,17 +62,17 @@ public class PlayerController0510 : MonoBehaviour
         }
 
         // 回復ポイントの方に移動
-        dir = v.normalized;
+        // dir = v.normalized;
 
         transform.position += dir * speed * Time.deltaTime;
 
         // ライフを表示
         lifeLabel.text = "Life = " + life.ToString("D6");
 
+        // エンターキーでシーンをリロード
         if(Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene(0);
         }
-
     }
 }

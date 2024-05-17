@@ -27,7 +27,7 @@ public class Number3 : MonoBehaviour
 
         if(sw)
         {
-            num = Random.Range(0, 999);
+            num = Random.Range(0, 1000);
             numLabel.text = num.ToString("D3");
         }
         else

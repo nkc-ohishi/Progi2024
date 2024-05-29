@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Number3/Number3.unity
-    guid: 04d8f92f1c741164d9af4bdbb8bc2b98
+    path: Assets/Memorygame/GameScene.unity
+    guid: 4ff340ced52ddd14bac35f7e9f682d14
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 1643132033}
   - component: {fileID: 1643132032}
   - component: {fileID: 1643132034}
+  - component: {fileID: 1643132035}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -371,13 +372,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643132031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 394b727ccead77a4fa0dae0a484a778a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 2019967300216066750, guid: 5ff28b775676ddb41be67a0aeaea1ccc, type: 3}
   table: {fileID: 15929894}
+--- !u!114 &1643132035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643132031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00790dbec2e17f64e8f8d1c80a4406dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 15929894}
 --- !u!1 &1743088829
 GameObject:
   m_ObjectHideFlags: 0

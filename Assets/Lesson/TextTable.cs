@@ -17,16 +17,16 @@ public class TextTable : MonoBehaviour
     void Start()
     {
         // 00 ～ 49 のテーブル
-        for(int y=0; y<5; y++)
-        {
-            for(int x=0; x<10; x++)
-            {
-                int num = x + y * 10;
-                resultStr += num.ToString("D2") + " ";
-            }
-            resultStr += "\n";
-        }
-        table.text = resultStr;
+        //for(int y=0; y<5; y++)
+        //{
+        //    for(int x=0; x<10; x++)
+        //    {
+        //        int num = x + y * 10;
+        //        resultStr += num.ToString("D2") + " ";
+        //    }
+        //    resultStr += "\n";
+        //}
+        //table.text = resultStr;
 
         // オブジェクトテーブル
         Vector3 anchorPoint = new Vector3(-7, -4, 0);
@@ -38,6 +38,72 @@ public class TextTable : MonoBehaviour
                 Instantiate(card, pos, Quaternion.identity);
             }
         }
+
+        // 問１．
+        // ■
+        // ■■
+        // ■■■
+        //for (int y = 0; y < 3; y++)
+        //{
+        //    for (int x = 0; x < y+1; x++)
+        //    {
+        //        resultStr += "■";
+        //    }
+        //    resultStr += "\n";
+        //}
+        //table.text = resultStr;
+
+        // 問２．
+        // ■■■
+        // ■■
+        // ■
+        //for (int y = 0; y < 3; y++)
+        //{
+        //    for (int x = 3; x > y ; x--)
+        //    {
+        //        resultStr += "■";
+        //    }
+        //    resultStr += "\n";
+        //}
+        //table.text = resultStr;
+
+        // 問３．
+        // 　　■
+        // 　■■■
+        // ■■■■■
+        //for (int y = 0; y < 3; y++)
+        //{
+        //    for (int x = 3; x > y; x--)
+        //    {
+        //        resultStr += "□";
+        //    }
+        //    for (int x = 0; x < y*2+1; x++)
+        //    {
+        //        resultStr += "■";
+        //    }
+        //    resultStr += "\n";
+        //}
+        //table.text = resultStr;
+
+        // 問４．
+        // ■■■■■
+        // 　■■■
+        // 　　■
+        for (int y = 0; y < 3; y++)
+        {
+            for (int x = 0; x < y; x++)
+            {
+                resultStr += "□";
+            }
+            for (int x = y*2 ; x<5 ; x++)
+            {
+                resultStr += "■";
+            }
+            resultStr += "\n";
+        }
+        table.text = resultStr;
+
+
     }
 }
 // 練習問題

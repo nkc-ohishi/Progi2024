@@ -5,17 +5,23 @@
 //------------------------------------------------------------------------------
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ren0617 : MonoBehaviour
 {
+    public Sprite[] sprites;
+
     public InputField inputField;
     public Text resultText;
+    public SpriteRenderer img;
 
     void Start()
     {
         //Shop(); // 自作メソッドの呼び出し
+
+        img.sprite = sprites[0];
     }
 
     void Update()
@@ -26,7 +32,7 @@ public class ren0617 : MonoBehaviour
     // テキスト内容の変数を終えたときに実行されるメソッド
     public void EndEdit()
     {
-        Shop(inputField.text);
+        Shop();
     }
 
     // P100 List 3-18 引数なし、戻り値なしのメソッド
@@ -35,13 +41,27 @@ public class ren0617 : MonoBehaviour
     //    Debug.Log("いらっしゃいませ");
     //}
 
-    void Shop(string itemName)
+    int CheckData(string str)
     {
-        Debug.Log("いらっしゃいませ");
+        int num = 9999;
+
+
+
+        return num;
+    }
+
+    void Shop()
+    {
+        string itemName = inputField.text;
+        string resultStr;
+
+        // 入力されたデータと一致する番号を検索
+        int no = CheckData(inputField.text);
+
 
         if(itemName == "薬草")
         {
-            resultText.text = itemName + "は100ゴールドです";
+            resultText.text = "【"+ itemName + "】は100ゴールドです";
         }
         else if(itemName == "ヒノキの棒")
         {
